@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <style>
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 5px;
+            padding-top: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header1">
+
+        <nav>
+            <a href="index.php">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <!--<a href="index.html"><img src="images/logo.png"></a>-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 48px; color: #F5FFFA	;">Keerthan Kumar L V
+            </h1>
+
+        </div>
+    </section>
+    <!---------- Blog Page Content ---------->
+
+    <section class="about_him">
+        <div class="rows">
+            <div class="about-left">
+                <div class="keerthan-pic"> <img width=100% height=400 src="images/certificate.jpg"></div><br>
+                <h2>👤 About me</h2>
+
+                <p>Hi, I’m Keerthan Kumar L V, one of the the creator of TechyGestures — a space where technology meets creativity. I’m a passionate tech enthusiast with a background in Computer Applications (BCA) and a strong interest in Artificial Intelligence,
+                    Machine Learning, and Human-Computer Interaction. My journey started with a simple curiosity: “How can machines understand us better?” This question sparked a series of projects, late-night coding sessions, and the creation of this
+                    blog.
+                </p>
+                <br>
+                <p>I’ve completed various certifications in AI and ML, constantly upgrading my skills to keep up with the fast-evolving tech world. I believe learning never stops, and through this blog, I share my findings, insights, and experiments with
+                    the world.</p><br>
+
+
+
+                <h2>📚 My Learning Journey</h2>
+                <p>Ever since I can remember, I’ve been fascinated by the way technology can change the way we live, learn, and communicate. Growing up, I wasn’t just interested in using gadgets — I wanted to understand how they work, what powers them, and
+                    how they could be improved. This natural curiosity led me to pursue a degree in Bachelor of Computer Applications (BCA), where I laid the foundation in programming, software development, databases, and human-computer interaction. But
+                    classroom knowledge was just the beginning. I found my real passion in creating solutions that solve real-world problems, especially in the field of gesture recognition and accessible technology.
+                </p>
+                <br>
+                <p>For me, technology isn’t just about building apps or writing code. It’s about solving human problems. I’m especially drawn to areas where tech can empower those who are often left behind — like people with speech or hearing impairments.</p>
+
+            </div><br>
+
+
+        </div>
+        <a href="https://www.youtube.com/" class="hero-btn red-btn" target="_blank">YOUTUBE CHANNEL</a>
+
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+
+    <section class="footer">
+        <h4 style="padding-top: 5px;">About Us</h4>
+        <p style="align-items: center;nav-left: auto;padding-left: 200px;padding-right: 200px;">We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how
+            people interact with the digital world.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com"><i
+                        class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i
+                        class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i
+                        class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i
+                        class="fa fa-linkedin"></i></a>
+
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </section>
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

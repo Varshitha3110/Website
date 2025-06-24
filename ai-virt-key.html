@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <style>
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 5px;
+            padding-top: 0px;
+        }
+        
+        .run_b1 {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .run_b1:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .run_b1:active {
+            transform: scale(0.95);
+            background-color: #004494;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header1">
+
+        <nav>
+            <a href="index.php">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <!--<a href="index.html"><img src="images/logo.png"></a>-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 48px; color: #F5FFFA	;">AI Virtual Keyboard
+            </h1>
+
+        </div>
+    </section>
+
+
+
+    <!---------------------------------------AI Virtual Keyboard----------------------------->
+    <section class="blog-content">
+        <div class="video-section">
+            <!-- Left Side: Video + Description -->
+            <div class="blog-left">
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/kjIE92fh5qE" title="AI Virtual Keyboard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                </div><br>
+                <h2>AI Virtual Keyboard</h2><br>
+
+                <p style="font-size: large;color: black;"><b>⌨️ What is an AI Virtual Keyboard?</b></p>
+                <p style="color: rgb(78, 76, 76);font-size: 14px;">
+                    An AI Virtual Keyboard is an application that allows users to type on a virtual interface by simply using hand gestures. Instead of pressing physical keys, your hand movements are tracked in real time and interpreted as keystrokes using computer vision
+                    and machine learning techniques.
+                </p>
+
+                <br>
+                <p style="font-size: large;color: black;"><b>🤖 How Does It Work?</b></p>
+                <ol style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                    <li><b>Hand Tracking:</b> Uses tools like MediaPipe to detect hand landmarks.</li>
+                    <li><b>Virtual Layout:</b> A keyboard layout is projected on screen, mapped with fingertip positions.</li>
+                    <li><b>Click Detection:</b> When the index finger moves close to the thumb (or certain depth threshold), it registers a key press.</li>
+                    <li><b>Feedback & Output:</b> The pressed key appears on the screen, forming words in a text area in real time.</li>
+                </ol>
+
+                <br>
+                <p style="font-size: large;color: black;"><b>🔧 Tools & Libraries Used</b></p>
+                <ul style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                    <li><b>OpenCV –</b> For real-time video feed, drawing UI components, and frame management.</li>
+                    <li><b>MediaPipe –</b> For efficient hand landmark detection and finger tracking.</li>
+                    <li><b>NumPy –</b> For efficient math operations with fingertip coordinates.</li>
+                    <li><b>Python –</b> Backend logic for gesture detection and virtual interface creation.</li>
+                </ul>
+
+                <br>
+                <p style="font-size: large;color: black;"><b>✅ Prerequisites</b></p>
+                <ol style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                    <li>Basic understanding of Python and OpenCV</li>
+                    <li>Installed dependencies: <code>opencv-python mediapipe numpy</code></li>
+                    <li>Webcam-enabled device for live input</li>
+                    <li>Virtual keyboard layout logic (for mapping coordinates to characters)</li>
+                </ol>
+
+                <br>
+                <p style="font-size: large;color: black;"><b>🚀 Want to Try It Yourself?</b></p>
+                <ul style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                    <li><b>Step 1:</b> Install the required libraries.</li>
+                    <li><b>Step 2:</b> <button class="run_b1" onclick="startKeyboard()"><tab>Click to Start</tab> </button> — Launches the virtual keyboard app.</li>
+                    <li><b>Step 3:</b> Move your hand over the virtual layout and perform a “click” gesture to type.</li>
+                    <li><b>Step 4:</b> Click the key "q" to Exits the virtual keyboard program.</li>
+                </ul>
+            </div>
+
+            <!-- Right Side: Content Table -->
+            <div class="blog-right" style="border-radius: 10px;">
+                <h3>Topics Covered</h3>
+                <ul class="content-table">
+                    <li>What is AI Virtual Keyboard ?</li>
+                    <li>How it works ?</li>
+                    <li>Libraries and tools</li>
+                    <li>Steps to implement</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    </div>
+
+
+    </div>
+
+    </div>
+    </section>
+
+    <!-------- footer ---------->
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+
+
+
+    <section class="footer">
+        <h4 style="padding-top: 5px;">About Us</h4>
+        <p style="align-items: center;nav-left: auto;padding-left: 200px;padding-right: 200px;">We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how
+            people interact with the digital world.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com" target="_blank"><i
+                        class="fa fa-facebook" ></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i
+                        class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i
+                        class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </section>
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        function startKeyboard() {
+            fetch("run_keyboard.php")
+                .then(response => response.text())
+                .then(data => {
+                    console.log("Response:", data);
+                    alert("Server says:\n" + data); // Show result
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Error occurred: " + error);
+                });
+        }
+    </script>
+
+
+</body>
+
+</html>

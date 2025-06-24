@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <style>
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 5px;
+            padding-top: 0px;
+        }
+        
+        .header3 {
+            min-height: 65vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(24, 27, 39, 0.7), rgba(68, 71, 76, 0.7)), /* Overlay gradient */
+            url(images/home.jpg);
+            background-position: cemter;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header3">
+
+        <nav>
+            <a href="index.php">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <!--<a href="index.html"><img src="images/logo.png"></a>-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 48px; color: #F5FFFA	;">About Us
+            </h1>
+
+        </div>
+    </section>
+
+    <!------- about us content -------->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Who we are ?</h1> <br>
+                <h4 style="font-style: oblique;">Welcome to TechGesture – Where Technology Speaks Through Movement.</h4>
+
+                <p>We are a dynamic team of passionate developers and designers who thrive on solving real-world problems through technology. From smart apps to intelligent systems, we craft innovative solutions with creativity, collaboration, and a shared
+                    vision for impact. Our journey is driven by curiosity, learning, and the desire to make a difference through our work.</p>
+
+                <p>At TechGesture, we are redefining the way humans interact with machines. Our mission is to bridge the gap between physical gestures and digital communication using cutting-edge AI and computer vision technologies. Whether it's enabling
+                    seamless sign language recognition, touchless interfaces, or gesture-based controls, we strive to make technology more intuitive, inclusive, and accessible.</p>
+                <p>Founded by a passionate team of developers, researchers, and designers, TechGesture is more than just a platform—it’s a movement toward a smarter, more empathetic world. Our flagship projects include real-time sign language translators,
+                    gesture-controlled applications, and AI-driven tools that empower people of all abilities.</p>
+                <p>We are computer aspirents who are very curious about technilogies and coding. We have achieved several certificates on courses and have gained knowlede about the subjects as weel</p>
+                <p>We believe innovation should speak every language—including gestures.</p><br>
+                <a href="https://www.youtube.com/@TechyGestures" class=" hero-btn red-btn " target="_blank">EXPOLER NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="images/about.jpg ">
+            </div>
+            <div class="about-container">
+                <div class="about-col1">
+                    <a href="varshi.html">
+                        <img src="images/varshi.jpg" alt="Koguru Varshitha" />
+                    </a>
+                    <p><b>Koguru Varshitha</b></p>
+                </div>
+                <div class="about-col2">
+                    <a href="keerthan.html">
+                        <img src="images/keerthan.jpg" alt="Keerthan Kumar L V" />
+                    </a>
+                    <p><b>Keerthan Kumar L V</b></p>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto; ">
+
+    <section class="footer ">
+        <h4 style="padding-top: 5px; ">About Us</h4>
+        <p style="align-items: center;nav-left: auto;padding-left: 200px;padding-right: 200px; ">We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how
+            people interact with the digital world.</p>
+        <div class="icons ">
+            <a href="https://www.facebook.com "><i
+                        class="fa fa-facebook "></i></a>
+            <a href="https://www.twitter.com "><i
+                        class="fa fa-twitter "></i></a>
+            <a href="https://www.instagram.com "><i
+                        class="fa fa-instagram "></i></a>
+            <a href="https://www.linkedin.com "><i
+                        class="fa fa-linkedin "></i></a>
+
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures " class="footer-link ">
+            <p>made with <i class="fa fa-heart-o "></i> by TechyGestures</p>
+        </a>
+    </section>
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks ");
+
+        function showMenu() {
+            navLinks.style.right = "0 ";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px ";
+        }
+    </script>
+
+</body>
+
+</html>

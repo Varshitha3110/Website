@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture | Achievements</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        .logo {
+            width: 100px;
+            height: auto;
+            padding: 5px 0;
+        }
+        
+        .text-box1 h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px;
+            color: #F5FFFA;
+            margin-top: 40px;
+        }
+        
+        .about_him {
+            padding: 50px 80px;
+            background: #f9f9f9;
+            line-height: 1.8;
+        }
+        
+        .about_him h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background-color: #ff4d4d;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+        
+        .hero-btn:hover {
+            background-color: #e63946;
+        }
+        
+        .varshitha-pic img {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .about_him {
+                padding: 30px 20px;
+            }
+            .text-box1 h1 {
+                font-size: 32px;
+                margin-top: 20px;
+            }
+            .hero-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="header1">
+        <nav>
+            <a href="index.php">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo">
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box1">
+            <h1>Our Achievements</h1>
+        </div>
+    </section>
+
+    <main class="about_him">
+        <div class="about-left">
+            <div class="varshitha-pic">
+                <img src="images/achivements.jpeg" alt="Achievements Image">
+            </div>
+
+            <h2>Udemy - HTML, CSS & JavaScript</h2>
+            <p>We have completed a web development course focused on HTML, CSS, and JavaScript, enabling us to build fully responsive and interactive websites. The course covered HTML5, CSS3 (animations, flexbox, and grid), and JavaScript fundamentals like
+                event handling and DOM manipulation. Mini-projects and UI components reinforced practical skills in modern frontend development.</p>
+
+            <h2>Anudip Foundation - Data Analytics using Python</h2>
+            <p>Through this certification, we mastered data interpretation, visualization, and business intelligence using Excel, SQL, Tableau, and Power BI. We built dashboards and reports to uncover trends and deliver data-backed insights for strategic
+                decisions.
+            </p>
+
+            <h2>Prinston Smart Engineers - Data Science</h2>
+            <p>We completed a professional Data Science course covering the end-to-end pipeline: data collection, preprocessing, modeling, and deployment. Using Python libraries like Pandas, NumPy, Scikit-learn, and Matplotlib, we implemented real-world
+                projects in classification, regression, and clustering to solve data-driven problems.</p>
+
+            <a href="https://www.youtube.com/@TechyGestures" class="hero-btn" target="_blank">YOUTUBE CHANNEL</a>
+        </div>
+    </main>
+
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+
+    <footer class="footer">
+        <h4>About Us</h4>
+        <p style="padding: 0 10%; line-height: 1.6;">We are driven by a passion for technology and a commitment to improving lives through innovation. We work tirelessly to bring ideas to life that redefine how people interact with the digital world.</p>
+
+        <div class="icons">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+        </div>
+
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>Made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </footer>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

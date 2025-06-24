@@ -1,0 +1,301 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <style>
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 5px;
+            padding-top: 0px;
+        }
+        
+        .run_b1 {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .run_b1:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .run_b1:active {
+            transform: scale(0.95);
+            background-color: #004494;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header1">
+
+        <nav>
+            <a href="index.php">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <!--<a href="index.html"><img src="images/logo.png"></a>-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 48px; color: #F5FFFA	;">Gesture Detection
+
+        </div>
+    </section>
+
+    <!---------------------------------------Gesture Detection----------------------------->
+
+    <section class="blog-content">
+        <div class="video-section">
+            <!-- Left Side: Video + Description -->
+            <div class="blog-left">
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZlnlNJpIKKU" title="AI Virtual Keyboard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                </div><br>
+                <h2>Gesture Detection</h2><br>
+                <p style="font-size: large;color: black;"><b> ✋ What is Gesture Detection Project?</b></p>
+                <p style="color: rgb(78, 76, 76);font-size: 14px;">Gesture Detection is a branch of computer vision and human-computer interaction (HCI) that focuses on interpreting human gestures — especially hand and body movements — using cameras and sensors. It allows machines to understand commands
+                    or expressions based on physical motion instead of relying on traditional input devices like keyboards or touchscreens.
+                </p>
+                <br>
+                <p style="font-size: large;color: black;"><b>🤖 How Does Gesture Detection Work?</b></p>
+                <p style="color: rgb(78, 76, 76);font-size: 14px;">At the core of gesture detection is a pipeline of image processing, feature extraction, and machine learning:</p>
+                <p>
+                    <ol style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                        <li><b>Image Acquisition:</b> Capturing input through a webcam or depth camera.</li>
+                        <li><b>Preprocessing:</b> Converting frames into grayscale or isolating the region of interest (like the hand).
+
+                        </li>
+                        <li><b>Feature Extraction:</b> Identifying key landmarks (e.g., fingertips, wrist, knuckles) using libraries like MediaPipe, OpenCV, or custom-trained models.
+
+                        </li>
+                        <li><b>Classification:</b> Using ML/DL models (e.g., CNNs, RNNs) to map the detected gesture to a known class (like "Hello", "Yes", "No").</li>
+                        <li><b>Output:</b> Translating the gesture into a response — for example, displaying a word .</li>
+
+                    </ol>
+                </p>
+
+                <br>
+
+                <p style="font-size: large;color: black;"><b>🔍 Tools & Technologies Used</b><br></p>
+                <p style="color: rgb(78, 76, 76);font-size: 14px">Some common tools and frameworks in gesture detection include:
+
+                    <br>
+                    <ul style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>MediaPipe –</b> Real-time hand tracking with landmark detection.</li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>OpenCV –</b> Image processing, contour detection, and filtering.
+
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>TensorFlow / Keras –</b> Building and training deep learning models.
+
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>PyTorch – </b>Flexible research-grade deep learning framework.
+
+
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> Arduino / Sensors – For hardware-based gesture control using accelerometers or gyroscopes.
+
+
+
+                        </li>
+                    </ul>
+                    <br><br>
+                    <p style="font-size: large;color: black;"><b>✅ Prerequisites for Gesture Detection</b><br></p><br>
+                    <ol style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>Basic Knowledge of Computer Vision</b> Understanding how images and video frames are processed Concepts like: Image filtering (blur, threshold), Contour detection, Color spaces (RGB, HSV), Edge detection (Canny, Sobel)</li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b> Familiarity with Machine Learning / Deep
+                            Learning</b> Classification techniques (e.g., SVM, KNN, Decision Trees), Deep Learning basics (CNNs for image recognition), Training and testing models using datasets
+
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b> Programming Skills</b> Ability to work with: OpenCV for real-time image processing, MediaPipe for hand tracking, NumPy, pandas for data handling
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b> Development Environment </b>Installed and configured: Python 3.x or Jupyter Notebook or any IDE (VS Code, PyCharm), Required libraries: opencv-python, mediapipe, tensorflow, matplotlib, etc.
+
+
+                        </li>
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b> Web CAm </b>You can create your own using webcam recordings or use an external devices
+
+                        </li>
+
+
+                    </ol>
+                    <br>
+                    <p style="font-size: large;color: black;"><b>🚀 Want to Execute Gesture Detection Yourself?
+                    </b><br></p><br>
+                    <ul style="color: rgb(78, 76, 76);font-size: 14px;" class="gesture_points">
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b> Step 1:</b> SetUp Your Environment and Make sure you have Python installed. Then, install the necessary libraries: pip install opencv-python mediapipe numpy tensorflow
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>Step 2 :</b>
+                            <tab> </tab><button class="run_b1" onclick="startGesture()"><tab>Click to Start</tab> </button> - Launch the gesture detechtion mode.
+
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>Step 3:</b> Start gesturing Place the hand in the open camera and give the gesture that are explained in the video.
+
+                        </li>
+
+                        <li style="color: rgb(78, 76, 76);font-size: 14px"> <b>Step 4: </b>To stop execution click key "q" by opening the tab.
+
+
+                        </li>
+
+
+                    </ul>
+
+            </div>
+
+
+
+
+            <!-- Right Side: Content Table -->
+
+            <div class="blog-right" style="border-radius: 10px;">
+                <h3>Topics Covered</h3>
+                <ul class="content-table">
+                    <li>What is Gesture Detection ?</li>
+                    <li>How to implement ?</li>
+                    <li>Tools and technologies</li>
+                    <li>Applications of Gesture Detection</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border: 1px solid #ccc; width: 100%; margin: 20px auto;">
+
+
+
+
+
+
+        <!-- Repeat for other video sections... -->
+    </section>
+
+
+
+
+
+    <div class="comment-box1">
+        <div class="ges-item">
+            <img src="images/hello.jpg" alt="Hello">
+            <p>Hello</p>
+        </div>
+        <div class="ges-item">
+            <img src="images/iloveu.jpg" alt="I Love You">
+            <p>I Love You</p>
+        </div>
+        <div class="ges-item">
+            <img src="images/okay.jpg" alt="Okay">
+            <p>Okay</p>
+        </div>
+        <div class="ges-item">
+            <img src="images/thanku.jpg" alt="Thank You">
+            <p>Thank You</p>
+        </div>
+        <div class="ges-item">
+            <img src="images/no.png" alt="No">
+            <p>No</p>
+        </div>
+    </div>
+
+    </div>
+
+
+    </div>
+
+    </div>
+    </section>
+
+    <!-------- footer ---------->
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+
+    <section class="footer">
+        <h4 style="padding-top: 5px;">About Us</h4>
+        <p style="align-items: center;nav-left: auto;padding-left: 200px;padding-right: 200px;">We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how
+            people interact with the digital world.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com"><i
+                        class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i
+                        class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i
+                        class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i
+                        class="fa fa-linkedin"></i></a>
+
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </section>
+
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        function startGesture() {
+            fetch("run_gesture.php")
+                .then(response => response.text())
+                .then(data => {
+                    console.log("Response:", data);
+                    alert("Server says:\n" + data); // Show result
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Error occurred: " + error);
+                });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        /* Animate blog content */
+        
+        .comment-box {
+            padding: 40px;
+            margin: 0 180px 40px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.6s;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 0 transparent;
+        }
+        
+        .comment-form input:focus,
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: #f44336;
+            box-shadow: 0 0 5px rgba(244, 67, 54, 0.4);
+        }
+        
+        .hero-btn.red-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .hero-btn.red-btn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+        /* Animation keyframes if not already present */
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .blog-left,
+        .blog-right,
+        .comment-box {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+        /* Apply staggered animation delays */
+        
+        .blog-right {
+            animation-delay: 0.3s;
+        }
+        
+        .comment-box {
+            animation-delay: 0.6s;
+        }
+        /* Hover effect on video cards */
+        
+        .video-container iframe {
+            transition: transform 0.4s ease;
+        }
+        
+        .video-container iframe:hover {
+            transform: scale(1.03);
+        }
+        /* Fade-in animation keyframes */
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Button hover effect */
+        
+        .hero-btn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+        /* Responsive nav menu animation */
+        
+        .nav-links {
+            transition: right 0.5s ease-in-out;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 0px;
+            padding-top: 0px;
+        }
+        
+        .blog-content {
+            padding: 60px;
+            background-color: #f8f8f8;
+            line-height: 1.8;
+        }
+        
+        .video-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        
+        .blog-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .blog-right {
+            flex: 0.3;
+            min-width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-right ul {
+            padding-left: 20px;
+        }
+        
+        .blog-right ul li {
+            margin-bottom: 10px;
+        }
+        
+        .comment-box {
+            padding: 40px;
+            margin: 0 180px 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            align-items: center;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header1">
+        <nav>
+            <a href="index.php">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="color: #F5FFFA;">Blog on AI and Machine Learning </h1>
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="video-section">
+            <div class="blog-left">
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/JMUxmLyrhSk" title="AI for beginners" frameborder="0" allowfullscreen>
+        </iframe>
+                </div><br>
+
+                <h2>🧠 AI for Beginners</h2>
+                <p><strong>What is Artificial Intelligence (AI)?</strong><br>Artificial Intelligence is the ability of machines to perform tasks that typically require human intelligence such as visual perception, speech recognition, decision-making, and
+                    language translation.</p>
+                <p><strong>How Does AI Work?</strong></p>
+                <ul>
+                    <li>🧾 <strong>Supervised Learning</strong>: Learning from labeled data.</li>
+                    <li>🧾 <strong>Unsupervised Learning</strong>: Finding hidden patterns in data.</li>
+                    <li>🧾 <strong>Reinforcement Learning</strong>: Learning through trial and error.</li>
+                </ul>
+                <p>AI is used in voice assistants (like Siri and Alexa), recommendation systems (Netflix, Amazon), and autonomous vehicles.</p>
+            </div>
+
+            <div class="blog-right">
+                <h3>📚 Topics Covered</h3>
+                <ul class="content-table">
+                    <li>What is AI?</li>
+                    <li>Real-life examples</li>
+                    <li>Types of Machine Learning</li>
+                    <li>Applications of AI</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="video-section">
+            <div class="blog-left">
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Pj0neYUp9Tc" title="ML Basics" frameborder="0" allowfullscreen>
+        </iframe>
+                </div><br>
+
+                <h2>📊 Machine Learning Basics</h2>
+                <p><strong>What is Machine Learning?</strong><br>Machine Learning is a subset of AI that focuses on algorithms that learn from data and make predictions or decisions without being explicitly programmed.</p>
+                <ul>
+                    <li>📘 Supervised Learning</li>
+                    <li>📘 Unsupervised Learning</li>
+                    <li>📘 Reinforcement Learning</li>
+                </ul>
+                <p>ML is used in fraud detection, email filtering, speech recognition, and predictive analytics in many fields like healthcare, finance, and marketing.</p>
+            </div>
+
+            <div class="blog-right">
+                <h3>📚 Topics Covered</h3>
+                <ul class="content-table">
+                    <li>What is Machine Learning?</li>
+                    <li>Types of Learning</li>
+                    <li>Algorithms in ML</li>
+                    <li>Applications of ML</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="comment-box">
+        <center>
+            <h3>💬 Leave a comment</h3>
+            <form class="comment-form" id="commentForm">
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <textarea rows="5" name="comment" placeholder="Your Comment" required></textarea>
+                <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+            </form>
+
+        </center><br>
+    </div><br><br>
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+    <section class="footer">
+        <h4 style="padding-top: 5px;">About Us</h4>
+        <p style="align-items: center;nav-left: auto;padding-left: 200px;padding-right: 200px;">We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how
+            people interact with the digital world.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com"><i
+                        class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i
+                        class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i
+                        class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i
+                        class="fa fa-linkedin"></i></a>
+
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.blog-left, .blog-right, .comment-box').forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        });
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+        document.getElementById("commentForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch("submit_comment.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                    document.getElementById("commentForm").reset();
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Something went wrong. Please try again.");
+                });
+        });
+    </script>
+</body>
+
+</html>

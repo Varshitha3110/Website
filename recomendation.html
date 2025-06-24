@@ -1,0 +1,288 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <style>
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 5px;
+            padding-top: 0px;
+        }
+    </style>
+
+
+
+    <style>
+        /* Recommendation boxes - fade-in on page load and smooth hover pop */
+        
+        .recommendation {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+            animation-delay: 0.2s;
+            /* delay so it appears smoothly */
+            transition: box-shadow 0.4s ease, background-color 0.4s ease, transform 0.3s ease;
+            cursor: default;
+        }
+        /* Slight scale up on hover */
+        
+        .recommendation:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background-color: #f0f0f0;
+            transform: translateY(0) scale(1.02);
+        }
+        /* Fade-in up keyframes */
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Hamburger & close icon smooth hover */
+        
+        .fa-bars,
+        .fa-close {
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .fa-bars:hover,
+        .fa-close:hover {
+            color: #007bff;
+            transform: scale(1.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .recommendation {
+            background: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        
+        .recommendation h2 {
+            margin-top: 0;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header1">
+
+        <nav>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <!--<a href="index.html"><img src="images/logo.png"></a>-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 48px; color: #F5FFFA	;">Recommendations
+
+        </div>
+    </section>
+
+    <!---------------------------------------Gesture Detection----------------------------->
+
+    <!---------------------------------------AI Hand Detector----------------------------->
+    <section class="blog-content">
+        <br>
+
+        <!-- New Introductory Content Added -->
+        <section class="recommendation">
+            <h2>Start Your Journey in AI & Machine Learning</h2>
+            <p>Artificial Intelligence (AI) and Machine Learning (ML) are revolutionizing industries across the globe. From healthcare and finance to entertainment and education, the impact of these technologies is transformative. As the demand for AI professionals
+                grows, now is the perfect time to explore this fascinating field.</p><br>
+
+            <h3 style="text-align: left;">Why learn AT & ML</h3>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li>🔍 Solve real-world problems using data-driven insights</li>
+                <li>🚀 Be part of cutting-edge innovation and automation</li>
+                <li>💼 Access high-paying, in-demand career opportunities</li>
+                <li>🤖 Understand how intelligent systems work behind the scenes</li>
+            </ul>
+
+            <p>Below are some handpicked video recommendations to help you get started with your AI/ML learning journey.</p>
+        </section>
+
+        <section class="recommendation">
+            <h2>Trending Technologies in Artificial Intelligence</h2>
+            <p>As AI evolves rapidly, it's important to stay updated with the technologies shaping the future. Here are some of the most exciting advancements:</p>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Computer Vision:</strong> Teaching machines to understand images and videos, used in self-driving cars, surveillance, and medical imaging.</li>
+                <li><strong>Natural Language Processing (NLP):</strong> Enables machines to understand, interpret, and generate human language (e.g., ChatGPT, Siri).</li>
+                <li><strong>Generative AI:</strong> AI that creates content such as text, music, or images, with applications in design, writing, and gaming.</li>
+                <li><strong>Reinforcement Learning:</strong> Learning based on feedback, used in robotics, recommendation systems, and autonomous systems.</li>
+            </ol>
+            <p>Each of these areas presents exciting opportunities for learners and developers to make a global impact.</p>
+        </section>
+
+        <!-- Existing Video Recommendations -->
+        <section class="recommendation"><br>
+            <h2>Introduction to Machine Learning</h2><br><br>
+            <p>Machine Learning is a subset of Artificial Intelligence (AI) that enables computers to learn from data and make decisions or predictions without being explicitly programmed.</p>
+            <p>Machine Learning is a subset of AI that enables machines to learn from data and improve their performance over time without being explicitly programmed. Rather than following hardcoded instructions, ML algorithms use statistical techniques
+                to identify patterns and make predictions or decisions.</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/GwIo3gDZCVQ" allowfullscreen></iframe>
+            </div>
+            <p>This video provides a beginner-friendly overview...</p>
+            <p>Watch on <a href="https://www.youtube.com/watch?v=GwIo3gDZCVQ" target="_blank" rel="noopener noreferrer">YouTube</a>.</p>
+        </section>
+
+        <section class="recommendation"><br>
+            <h2>Python Tutorial for Beginners</h2><br><br>
+            <p>Python is the most popular language for Machine Learning due to its simplicity and the vast ecosystem of libraries and frameworks.</p>
+            <p>Python has become the dominant programming language in the field of Artificial Intelligence, Machine Learning, and Deep Learning. Its simplicity, readability, and vast ecosystem of libraries make it the top choice for developers and researchers.
+
+            </p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" allowfullscreen></iframe>
+            </div>
+            <p>A comprehensive Python tutorial covering the basics of the python.</p>
+            <p>Watch on <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" rel="noopener noreferrer">YouTube</a>.</p>
+        </section>
+
+        <section class="recommendation"><br>
+            <h2>Deep Learning Full Course - Learn Deep Learning from Scratch</h2><br><br>
+            <p>Deep Learning is a subfield of Machine Learning that mimics the workings of the human brain using Artificial Neural Networks (ANNs).</p>
+            <p>Deep Learning is a specialized branch of ML that mimics how the human brain processes data, using structures known as Artificial Neural Networks. These networks consist of layers of nodes (neurons) that process information in complex ways.</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/aircAruvnKk" allowfullscreen></iframe>
+            </div>
+            <p>This comprehensive deep learning course covers neural networks which is a sub domain in data science.</p>
+            <p>Watch on <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener noreferrer">YouTube</a>.</p>
+        </section>
+    </section>
+    <!-------- footer ---------->
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p style="align-items: center;nav-left: auto;padding-left: 200px;padding-right: 200px;">We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how
+            people interact with the digital world.</p>
+
+        <div class="icons">
+            <a href="https://www.facebook.com"><i
+                        class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i
+                        class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i
+                        class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i
+                        class="fa fa-linkedin"></i></a>
+
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </section>
+
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+    <script>
+        function runScript1() {
+            fetch('/run-script1', {
+                method: 'POST'
+            });
+        }
+
+        function runScript2() {
+            fetch('/run-script2', {
+                method: 'POST'
+            });
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

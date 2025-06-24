@@ -1,0 +1,266 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGesture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <style>
+        .logo {
+            width: 100px;
+            /* Adjust as needed */
+            height: auto;
+            padding: 5px;
+            padding-top: 0px;
+        }
+        
+        body {
+            animation: zoomFade 2s ease-in-out forwards;
+            transform: scale(0.98);
+        }
+        
+        @keyframes zoomFade {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        body,
+        h1,
+        p,
+        a {
+            transition: all 0.4s ease-in-out;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            word-wrap: break-word;
+            max-width: 250px;
+            /* You can adjust this */
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        td {
+            white-space: pre-wrap;
+            /* Preserve line breaks in comment text */
+        }
+        
+        .contact-col input,
+        .contact-col textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .contact-col input:focus,
+        .contact-col textarea:focus {
+            border-color: #f44336;
+            box-shadow: 0 0 8px rgba(244, 67, 54, 0.2);
+            outline: none;
+            transform: scale(1.02);
+        }
+        
+        .hero-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .hero-btn:hover {
+            background-color: #e53935;
+            transform: scale(1.05);
+        }
+        
+        .contact-us .row {
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+        
+        .contact-col div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-col div:hover {
+            transform: translateX(10px);
+        }
+        
+        .contact-col i {
+            font-size: 24px;
+            color: #f44336;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-col div:hover i {
+            transform: scale(1.3);
+        }
+        /* Fade animation for section entry */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header1">
+
+        <nav>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="images/logo.png" alt="TechGesture Logo" style="width: 100%;">
+                </div>
+            </a>
+            <!--<a href="index.html"><img src="images/logo.png"></a>-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">PROJECTS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gesture.html">Gesture Detection</a></li>
+                            <li><a href="ai-virt-key.html">Virtual Keyboard</a></li>
+                            <li><a href="ai-hand-mouse.html">AI Hand Mouse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box1">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 48px; color: #F5FFFA	;">Contact Us
+            </h1>
+
+        </div>
+    </section>
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.368144678623!2d77.55384341419037!3d13.012212417508028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d7f3535d71b%3A0x660d25b66e9fb25c!2sWorld+Trade+Centre!5e0!3m2!1sen!2sin!4v1565255080367!5m2!1sen!2sin"
+            width="720" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div><i class="fa fa-home"></i>
+                    <span>
+                        <h5>Bommanahalli</h5>
+                        <p>Bangalore, Karnataka, IN</p>
+                    </span>
+                </div>
+                <div><i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+1 0123456789</h5>
+                        <p>Mon - Sat, 10AM - 6PM</p>
+                    </span>
+                </div>
+                <div><i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>techgestures@gmail.com</h5>
+                        <p>Email us your query anytime</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="email" name="email" placeholder="Enter email address" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <hr style="border: 1px solid #ccc; width: 80%; margin: 20px auto;">
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p style="padding: 0 200px; text-align: center;">
+            We are driven by a passion for technology and a commitment to improving lives through innovation. Founded on the belief that technology should be intuitive, accessible, and impactful, we work tirelessly to bring ideas to life that redefine how people
+            interact with the digital world.
+        </p>
+        <div class="icons">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <a href="https://www.youtube.com/@TechyGestures" class="footer-link">
+            <p>Made with <i class="fa fa-heart-o"></i> by TechyGestures</p>
+        </a>
+    </section>
+
+    <script>
+        const navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // Stop form from submitting normally
+
+            const formData = new FormData(this);
+
+            fetch("contact-form-handler.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data); // Show popup with PHP response
+                    document.getElementById("contactForm").reset(); // Optional: reset form
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Something went wrong. Please try again.");
+                });
+        });
+    </script>
+</body>
+
+</html>
